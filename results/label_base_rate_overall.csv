@@ -1,0 +1,4 @@
+scope,n_rows,n_positive,base_rate,n_countries
+all eligible pool + test rows,4687,1243,0.265201621506294,201
+pool,4093,1095,0.2675299291473247,201
+test,594,148,0.24915824915824916,198

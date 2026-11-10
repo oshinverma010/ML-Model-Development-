@@ -1,0 +1,2 @@
+split,t_min,t_max,n_rows,n_countries,n_positive,base_rate
+pool,1993,2013,4093,201,1095,0.2675299291473247

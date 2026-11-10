@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ipynb_checkpoints/
+*.egg-info/
+# Read-only reference clones (not part of the submission)
+reference/
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+results/_rehearsal/
+results/_cv_run.log
+results/_test_run.log
+/report/report_notes.md

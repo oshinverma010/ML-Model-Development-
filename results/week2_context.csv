@@ -1,0 +1,10 @@
+key,value,source
+h1_rho,0.854765064772757,hypothesis_results.csv H1 primary
+h1_n,198.0,hypothesis_results.csv H1 primary
+h3_ratio,14.1,hypothesis_results.csv H3 primary comment
+decoupled_pct_low_income,5.0,h6_contingency_and_residuals.csv
+decoupled_pct_lower_middle_income,9.30232558139535,h6_contingency_and_residuals.csv
+decoupled_pct_upper_middle_income,20.37037037037037,h6_contingency_and_residuals.csv
+decoupled_pct_high_income,64.17910447761194,h6_contingency_and_residuals.csv
+h4_p_raw,0.012919145258849293,hypothesis_results.csv H4 primary
+h4_p_excl_small,0.07440805332008828,hypothesis_results.csv H4 robustness excluding population < 1 million

@@ -1,0 +1,72 @@
+{
+  "frozen_utc": "2026-11-05 12:33:54",
+  "git_commit_at_freeze": "875e6078ecb7b9dfc116fc0974baa33de69bea84",
+  "h": 3,
+  "pool_end": 2013,
+  "test_years": [
+    2017,
+    2018,
+    2019
+  ],
+  "features": [
+    "ln_gdp_pc",
+    "gdp_g1",
+    "gdp_cagr3",
+    "gdp_vol5",
+    "ln_pop",
+    "pop_g3",
+    "urban_pct",
+    "industry_pct",
+    "ln_co2_pc",
+    "co2_chg1",
+    "co2_chg3",
+    "co2_chg5",
+    "ln_co2_per_gdp",
+    "ci_chg3",
+    "ln_energy_pc",
+    "ln_energy_per_gdp",
+    "co2_per_unit_energy",
+    "coal_share",
+    "oil_share",
+    "gas_share"
+  ],
+  "chosen_model": "lr",
+  "baseline_model": "lr",
+  "models": {
+    "lr": {
+      "imputer": "median",
+      "class_weight": null,
+      "params": {
+        "l1_ratio": 0.7,
+        "C": 3
+      },
+      "threshold": 0.12391763306856672
+    },
+    "rf": {
+      "imputer": "median",
+      "class_weight": null,
+      "params": {
+        "n_estimators": 500,
+        "min_samples_leaf": 40,
+        "max_features": "sqrt",
+        "max_depth": 5
+      },
+      "threshold": 0.19743989174029056
+    },
+    "hgb": {
+      "imputer": "native",
+      "class_weight": null,
+      "params": {
+        "min_samples_leaf": 50,
+        "max_leaf_nodes": 8,
+        "max_iter": 400,
+        "max_depth": 6,
+        "learning_rate": 0.01,
+        "l2_regularization": 1
+      },
+      "threshold": 0.1728523713549547
+    }
+  },
+  "threshold_rule": "maximise F1 on pooled out-of-fold rolling-origin predictions of the pool",
+  "oof_sha256": "78860352600c4556401967f9b44e9b1f6dd95e218228608b6f3097b352868ddc"
+}

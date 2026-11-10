@@ -1,0 +1,4 @@
+model,best_imputer,best_class_weight,best_pr_auc,best_se,n_within_one_se,chosen_imputer,chosen_class_weight,chosen_pr_auc
+lr,iterative,none,0.35043807266211263,0.03456734191435538,6,median,none,0.344984709369084
+rf,median,balanced,0.38611879266346383,0.04421439682092515,6,median,none,0.38438574118077257
+hgb,median,none,0.37579219982479045,0.03749453265491036,8,native,none,0.362657136569345

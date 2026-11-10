@@ -1,0 +1,18 @@
+column,in_codebook,in_data,status
+country,True,True,used
+iso_code,True,True,used
+year,True,True,used
+population,True,True,used
+co2,True,True,used
+co2_per_capita,True,True,used
+energy_per_capita,True,True,used
+energy_per_gdp,True,True,used
+co2_per_unit_energy,True,True,used
+coal_co2,True,True,used
+oil_co2,True,True,used
+gas_co2,True,True,used
+cement_co2,True,True,used
+flaring_co2,True,True,used
+fossil_share_energy,False,False,NOT AVAILABLE (dropped from feature list)
+low_carbon_share_energy,False,False,NOT AVAILABLE (dropped from feature list)
+renewables_share_energy,False,False,NOT AVAILABLE (dropped from feature list)

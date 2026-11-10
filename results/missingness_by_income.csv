@@ -1,0 +1,81 @@
+feature,income_group,share_missing,n_rows
+ln_gdp_pc,High income,0.0,1439
+gdp_g1,High income,0.002779708130646282,1439
+gdp_cagr3,High income,0.008339124391938846,1439
+gdp_vol5,High income,0.027102154273801252,1439
+ln_pop,High income,0.0,1439
+pop_g3,High income,0.0,1439
+urban_pct,High income,0.0,1439
+industry_pct,High income,0.1014593467685893,1439
+ln_co2_pc,High income,0.0,1439
+co2_chg1,High income,0.0,1439
+co2_chg3,High income,0.0,1439
+co2_chg5,High income,0.001389854065323141,1439
+ln_co2_per_gdp,High income,0.0,1439
+ci_chg3,High income,0.008339124391938846,1439
+ln_energy_pc,High income,0.0423905489923558,1439
+ln_energy_per_gdp,High income,0.21195274496177902,1439
+co2_per_unit_energy,High income,0.0423905489923558,1439
+coal_share,High income,0.23627519110493397,1439
+oil_share,High income,0.0,1439
+gas_share,High income,0.231410701876303,1439
+ln_gdp_pc,Low income,0.0,475
+gdp_g1,Low income,0.004210526315789474,475
+gdp_cagr3,Low income,0.014736842105263158,475
+gdp_vol5,Low income,0.031578947368421054,475
+ln_pop,Low income,0.0,475
+pop_g3,Low income,0.0,475
+urban_pct,Low income,0.0,475
+industry_pct,Low income,0.12842105263157894,475
+ln_co2_pc,Low income,0.0,475
+co2_chg1,Low income,0.002105263157894737,475
+co2_chg3,Low income,0.00631578947368421,475
+co2_chg5,Low income,0.010526315789473684,475
+ln_co2_per_gdp,Low income,0.0,475
+ci_chg3,Low income,0.018947368421052633,475
+ln_energy_pc,Low income,0.008421052631578947,475
+ln_energy_per_gdp,Low income,0.13052631578947368,475
+co2_per_unit_energy,Low income,0.008421052631578947,475
+coal_share,Low income,0.5621052631578948,475
+oil_share,Low income,0.0,475
+gas_share,Low income,0.7347368421052631,475
+ln_gdp_pc,Lower middle income,0.0,961
+gdp_g1,Lower middle income,0.002081165452653486,961
+gdp_cagr3,Lower middle income,0.004162330905306972,961
+gdp_vol5,Lower middle income,0.006243496357960458,961
+ln_pop,Lower middle income,0.0,961
+pop_g3,Lower middle income,0.0,961
+urban_pct,Lower middle income,0.0,961
+industry_pct,Lower middle income,0.053069719042663895,961
+ln_co2_pc,Lower middle income,0.0,961
+co2_chg1,Lower middle income,0.001040582726326743,961
+co2_chg3,Lower middle income,0.004162330905306972,961
+co2_chg5,Lower middle income,0.011446409989594173,961
+ln_co2_per_gdp,Lower middle income,0.0,961
+ci_chg3,Lower middle income,0.008324661810613945,961
+ln_energy_pc,Lower middle income,0.008324661810613945,961
+ln_energy_per_gdp,Lower middle income,0.12903225806451613,961
+co2_per_unit_energy,Lower middle income,0.008324661810613945,961
+coal_share,Lower middle income,0.43600416233090533,961
+oil_share,Lower middle income,0.004162330905306972,961
+gas_share,Lower middle income,0.5650364203954215,961
+ln_gdp_pc,Upper middle income,0.0,1218
+gdp_g1,Upper middle income,0.0024630541871921183,1218
+gdp_cagr3,Upper middle income,0.007389162561576354,1218
+gdp_vol5,Upper middle income,0.023809523809523808,1218
+ln_pop,Upper middle income,0.0,1218
+pop_g3,Upper middle income,0.0,1218
+urban_pct,Upper middle income,0.0,1218
+industry_pct,Upper middle income,0.0722495894909688,1218
+ln_co2_pc,Upper middle income,0.0,1218
+co2_chg1,Upper middle income,0.0,1218
+co2_chg3,Upper middle income,0.003284072249589491,1218
+co2_chg5,Upper middle income,0.008210180623973728,1218
+ln_co2_per_gdp,Upper middle income,0.0,1218
+ci_chg3,Upper middle income,0.010673234811165846,1218
+ln_energy_pc,Upper middle income,0.05665024630541872,1218
+ln_energy_per_gdp,Upper middle income,0.2110016420361248,1218
+co2_per_unit_energy,Upper middle income,0.05665024630541872,1218
+coal_share,Upper middle income,0.30623973727422005,1218
+oil_share,Upper middle income,0.0,1218
+gas_share,Upper middle income,0.3784893267651888,1218

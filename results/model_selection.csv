@@ -1,0 +1,2 @@
+best_model,best_pr_auc,best_se,threshold_for_simpler,models_within_one_se,chosen_model,chosen_pr_auc,rule
+rf,0.3844522183895608,0.050889051336270995,0.3335631670532898,"lr,rf,hgb",lr,0.3464719277459947,highest mean PR-AUC; simpler model within 1 SE wins

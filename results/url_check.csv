@@ -1,0 +1,22 @@
+what,url,outcome,checked_utc
+OWID CO2 data,https://raw.githubusercontent.com/owid/co2-data/master/owid-co2-data.csv,HTTP 200,2026-11-05 12:59
+OWID CO2 codebook,https://raw.githubusercontent.com/owid/co2-data/master/owid-co2-codebook.csv,HTTP 200,2026-11-05 12:59
+World Bank API (GDP per capita),https://api.worldbank.org/v2/country/all/indicator/NY.GDP.PCAP.KD?date=2022&format=json&per_page=1,HTTP 200,2026-11-05 12:59
+World Bank API (country metadata),https://api.worldbank.org/v2/country?format=json&per_page=1,HTTP 200,2026-11-05 12:59
+Crossref API,https://api.crossref.org/works/10.1214/aos/1176344552,HTTP 200,2026-11-05 12:59
+Week 1 repository,https://github.com/KanishkVerma-046/co2-economy-eda-proposal,HTTP 200,2026-11-05 12:59
+Week 2 repository,https://github.com/KanishkVerma-046/co2-gdp-hypothesis-testing,HTTP 200,2026-11-05 12:59
+reference DOI,https://doi.org/10.1007/s10994-020-05910-7,HTTP 200,2026-11-05 13:00
+reference DOI,https://doi.org/10.1016/j.ins.2011.12.028,HTTP 200,2026-11-05 13:00
+reference DOI,https://doi.org/10.1016/j.patter.2023.100804,HTTP 200,2026-11-05 13:00
+reference DOI,https://doi.org/10.1023/a:1010933404324,HTTP 200,2026-11-05 13:00
+reference DOI,https://doi.org/10.1088/1748-9326/ab842a,HTTP 200,2026-11-05 13:00
+reference DOI,https://doi.org/10.1111/ecog.02881,HTTP 403,2026-11-05 13:00
+reference DOI,https://doi.org/10.1111/j.1467-9868.2005.00503.x,HTTP 403,2026-11-05 13:00
+reference DOI,https://doi.org/10.1145/1102351.1102430,HTTP 403,2026-11-05 13:00
+reference DOI,https://doi.org/10.1145/1143844.1143874,HTTP 403,2026-11-05 13:00
+reference DOI,https://doi.org/10.1186/s12864-019-6413-7,HTTP 200,2026-11-05 13:00
+reference DOI,https://doi.org/10.1214/10-sts330,HTTP 200,2026-11-05 13:00
+reference DOI,https://doi.org/10.1214/aos/1013203451,HTTP 200,2026-11-05 13:00
+reference DOI,https://doi.org/10.1214/aos/1176344552,HTTP 200,2026-11-05 13:00
+reference DOI,https://doi.org/10.1371/journal.pone.0118432,HTTP 200,2026-11-05 13:00

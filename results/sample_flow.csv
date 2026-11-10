@@ -1,0 +1,6 @@
+stage,n_remaining,n_dropped
+"all entity-years, t = 1993-2019",6183,0
+no CO2 per capita > 0 at t,5765,418
+no GDP per capita > 0 at t,5294,471
+no CO2 per capita > 0 at t+3,5294,0
+no GDP per capita > 0 at t+3,5283,11

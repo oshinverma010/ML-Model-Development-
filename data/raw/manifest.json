@@ -1,0 +1,51 @@
+{
+  "owid-co2-data.csv": {
+    "url": "https://raw.githubusercontent.com/owid/co2-data/master/owid-co2-data.csv",
+    "downloaded_utc": "2026-11-05 12:14:59",
+    "bytes": 14377942,
+    "sha256": "7f78e2b218ce4bb8c538bbec04fdc9a7982e8d40bff972e650df603899edd5f6",
+    "note": ""
+  },
+  "owid-co2-codebook.csv": {
+    "url": "https://raw.githubusercontent.com/owid/co2-data/master/owid-co2-codebook.csv",
+    "downloaded_utc": "2026-11-05 12:15:00",
+    "bytes": 24149,
+    "sha256": "33b4f5e00efd58c7b83863f736beba1af4df946b43642b0400c3ec38648e0e8e",
+    "note": ""
+  },
+  "wb_country_metadata.csv": {
+    "url": "https://api.worldbank.org/v2/country",
+    "downloaded_utc": "2026-11-05 12:15:00",
+    "bytes": 21405,
+    "sha256": "ec0788af0e02ce31452b08f6d0d0a3ec90c1a263dac25a191c129c8bffc2b248",
+    "note": "296 rows incl. aggregates"
+  },
+  "wb_NY.GDP.PCAP.KD.csv": {
+    "url": "https://api.worldbank.org/v2/country/all/indicator/NY.GDP.PCAP.KD?date=1988:2022",
+    "downloaded_utc": "2026-11-05 12:15:02",
+    "bytes": 397214,
+    "sha256": "c7a7544da3e31dedb158d972ed8413c82648d97e4a4edc29decab0fb49c6aa58",
+    "note": "9310 rows incl. aggregates and nulls"
+  },
+  "wb_SP.POP.TOTL.csv": {
+    "url": "https://api.worldbank.org/v2/country/all/indicator/SP.POP.TOTL?date=1988:2022",
+    "downloaded_utc": "2026-11-05 12:15:03",
+    "bytes": 346181,
+    "sha256": "d192220d00457d1d695073af1777a020d0a732f809477c788cc65bcd8e795f22",
+    "note": "9310 rows incl. aggregates and nulls"
+  },
+  "wb_SP.URB.TOTL.IN.ZS.csv": {
+    "url": "https://api.worldbank.org/v2/country/all/indicator/SP.URB.TOTL.IN.ZS?date=1988:2022",
+    "downloaded_utc": "2026-11-05 12:15:04",
+    "bytes": 402007,
+    "sha256": "1a14fc949e16171a61702e42b48426554023e2314910dc30e29c07debfe9bd22",
+    "note": "9310 rows incl. aggregates and nulls"
+  },
+  "wb_NV.IND.TOTL.ZS.csv": {
+    "url": "https://api.worldbank.org/v2/country/all/indicator/NV.IND.TOTL.ZS?date=1988:2022",
+    "downloaded_utc": "2026-11-05 12:15:06",
+    "bytes": 383569,
+    "sha256": "5ebcea5e1f2935076a1010f220d51e800feb2506d99226d7f73157f8a6349fa9",
+    "note": "9310 rows incl. aggregates and nulls"
+  }
+}

@@ -1,0 +1,73 @@
+"""Risk register table for Section 9. The 'what happened' column is filled from results/*.csv through V."""
+from __future__ import annotations
+
+from tables import md_table
+
+
+def risk_register(V: dict) -> str:
+    f3 = lambda k: f"{float(V[k]):.3f}"  # noqa: E731
+    p0 = lambda k: f"{100 * float(V[k]):.0f}%"  # noqa: E731
+    p1 = lambda k: f"{100 * float(V[k]):.1f}%"  # noqa: E731
+    rows = [
+        ["Temporal leakage (future information reaching the model)",
+         "A model that sees later years looks better than it is and fails in use",
+         "Features use data at t and earlier; pool, purge and test split; rolling-origin CV with a purge gap; imputers, scalers and limits fitted inside folds",
+         f"A test perturbs all data after a cut-off and no feature changes. CV scores are modest (best mean PR-AUC {f3('cv_rf_pr_auc_mean')}), which is not the pattern a leak produces."],
+        ["Label overlap between adjacent windows",
+         "Windows at t and t+1 share two years, so rows are not independent and validation can echo training",
+         "Three-year purge between training and validation blocks; whole-country bootstrap",
+         f"Purge gaps verified by test 19. Paired CV differences carry wide country-clustered intervals, for example logistic regression minus random forest {float(V['pair_lr_rf_diff']):+.3f} [{float(V['pair_lr_rf_ci_low']):+.3f}, {float(V['pair_lr_rf_ci_high']):+.3f}]."],
+        ["Country leakage (the same country on both sides of a split)",
+         "The model can recognise a country instead of learning a general pattern",
+         "No country identifier as a feature; secondary country-grouped CV; clustered bootstrap",
+         f"Grouped CV gave higher scores than rolling-origin CV (logistic regression {f3('gkf_lr_pr_auc_mean')} versus {f3('cv_lr_pr_auc_mean')}, random forest {f3('gkf_rf_pr_auc_mean')} versus {f3('cv_rf_pr_auc_mean')}). Because grouped folds also mix years, this shows how optimistic time-blind splitting would have been."],
+        ["COVID-19 distribution shift",
+         "Windows ending in 2020-2022 span an unusual recession and rebound",
+         "Base rate by year; primary test on t = 2017-2019; variant without t = 2017",
+         f"Test base rates were {p1('bry_test_2017_base_rate')}, {p1('bry_test_2018_base_rate')} and {p1('bry_test_2019_base_rate')} for t = 2017, 2018, 2019. Dropping t = 2017 raised logistic-regression PR-AUC to {f3('trob_exclude_t_2017_window_ends_2020_lr_pr_auc')} (persistence {f3('trob_exclude_t_2017_window_ends_2020_persistence_pr_auc')}); the ordering of methods did not change."],
+        ["Class imbalance",
+         "About three rows in four are negatives; accuracy rewards predicting nothing",
+         "PR-AUC for selection; MCC and balanced accuracy reported; class weights compared; no SMOTE",
+         f"Balanced weighting did not win the pre-specified rule for any model; for the logistic regression mean PR-AUC was {f3('s1_lr_median_none_pr_auc_mean')} without and {f3('s1_lr_median_balanced_pr_auc_mean')} with weights."],
+        ["Missing not at random (MNAR)",
+         "Gaps in small, poor or conflict-affected countries carry information and cannot be imputed away",
+         "Audit by feature, year and group; missing-indicator flags; native NaN handling compared",
+         f"{int(V['mt_n_features_income_sig'])} of {int(V['mt_n_features_missing'])} features with gaps differ by income group. The four imputation options scored within one standard error of each other for every model, so the choice mattered little."],
+        ["Overfitting to the CV folds",
+         "Tuning on the same folds that score the model inflates the score",
+         "Small grids (30 draws), simplicity rule, test set kept for one run",
+         f"Test scores were not lower than CV scores (logistic regression PR-AUC {f3('test_lr_pr_auc')} on test versus {f3('cv_lr_pr_auc_mean')} in CV), so no optimism from tuning was visible; the test base rate was also a little lower."],
+        ["Selection bias from comparing many models",
+         "The winner of a comparison is partly lucky",
+         "Only three trained models; selection rule fixed in advance; one test run",
+         f"The rule chose the simplest model within one standard error. On the test set the random forest and HGB scored higher (post hoc PR-AUC difference {float(V['ph_lr_rf_pr_auc_diff']):+.3f} for logistic regression minus random forest). The choice was not changed after seeing this."],
+        ["Calibration drift",
+         "Probabilities can be right in one period and wrong in the next",
+         "Reliability curve, ECE and Brier score on the test; threshold fixed from CV",
+         f"ECE moved from {f3('oof_lr_ece')} in CV to {f3('test_lr_ece')} on test for the logistic regression; the random forest went from {f3('oof_rf_ece')} to {f3('test_rf_ece')}."],
+        ["Threshold degeneracy under weak signal",
+         "The F1-maximising threshold becomes very low when the model separates classes poorly",
+         "Threshold-free metrics carry the main conclusions",
+         f"The frozen logistic-regression threshold was {f3('cfg_lr_threshold')}: it flagged almost every test row (recall {f3('test_lr_recall')}, precision {f3('test_lr_precision')}, accuracy {f3('test_lr_accuracy')})."],
+        ["Small subgroups",
+         "A few countries decide a subgroup score",
+         "Show n and positives; clustered CIs; no CI for fewer than 10 rows or 3 countries",
+         f"North America has {int(V['sub_region_north_america_n'])} test rows and South Asia {int(V['sub_region_south_asia_n'])} rows with {int(V['sub_region_south_asia_n_positive'])} positive; no conclusions are drawn for them."],
+        ["Circular income groups",
+         "Income group is defined from income, which is already a feature",
+         "Income group never used as a feature, only to evaluate subgroups",
+         f"An income-group prior scored PR-AUC {f3('ph_lr_group_prior_pr_auc_value_b')} on test, almost the same as the logistic regression ({f3('test_lr_pr_auc')}); see Section 8.5."],
+        ["Ecological fallacy",
+         "Country-level patterns need not hold inside a country",
+         "Only country-level statements; no claim about people or regions inside countries",
+         "Not testable with these data; the report words all findings at country level."],
+        ["Production-based accounting",
+         "CO2 produced inside a country excludes emissions embodied in imports",
+         "State the definition; do not claim anything about consumption",
+         "Not measured. A country can look as if it decoupled by importing carbon-intensive goods."],
+        ["Data revisions and vintage",
+         "OWID and World Bank series are revised, so a later download can differ",
+         "Raw files hashed in a manifest; results tied to one download",
+         f"All files were downloaded on {V['download_date']}; test 5 checks every hash."],
+    ]
+    return md_table(["Risk", "Why it matters here", "Mitigation", "What happened in this data"], rows, ["l", "l", "l", "l"])

@@ -1,0 +1,10 @@
+{
+  "run_utc": "2026-11-05 12:47:59",
+  "config_sha256": "c4c1a3d3e4417232e4ee30092d980a0911d4332a87e8c4128fff078fb47f231c",
+  "n_test_rows": 594,
+  "n_test_positive": 148,
+  "sklearn": "1.9.1",
+  "pandas": "3.1.1",
+  "numpy": "2.5.4",
+  "note": "The test set was evaluated once. Re-running is blocked by the existence of this file."
+}

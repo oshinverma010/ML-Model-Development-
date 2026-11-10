@@ -1,0 +1,14 @@
+step,rule,rows_before,rows_after,rows_dropped_or_changed,note
+wb_meta,drop World Bank aggregates (region == Aggregates),296,217,79,
+wb_ind:NY.GDP.PCAP.KD,keep country rows only,9310,7595,1715,546 null values kept as missing (not imputed)
+wb_ind:SP.POP.TOTL,keep country rows only,9310,7595,1715,2 null values kept as missing (not imputed)
+wb_ind:SP.URB.TOTL.IN.ZS,keep country rows only,9310,7595,1715,0 null values kept as missing (not imputed)
+wb_ind:NV.IND.TOTL.ZS,keep country rows only,9310,7595,1715,"1,322 null values kept as missing (not imputed)"
+owid_years,restrict to 1988-2022,50411,8879,41532,
+owid_crosswalk,manual crosswalk Kosovo -> XKX,35,0,35,rows changed (not dropped)
+owid_agg,"drop OWID rows with no ISO3 (aggregates, regions, shipping, aviation...)",8879,7665,1214,35 non-country entities
+join,"outer join OWID x World Bank on (iso3, year)",15260,8015,7245,"both=7,245, owid_only=420, wb_only=350"
+range:urban_pct,shares outside 0-100 set to NaN,7595,7595,0,
+range:industry_pct,shares outside 0-100 set to NaN,6273,6273,0,
+logguard:co2_pc,non-positive values excluded from log transforms,7447,7437,10,
+logguard:gdp_pc,non-positive values excluded from log transforms,7049,7049,0,
